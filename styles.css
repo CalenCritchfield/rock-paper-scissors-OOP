@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* a childish font */
+
+  font-family: "baloo 2", sans-serif;
+  background: url("pictures/sun-tornado.svg") center no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+nav img {
+  width: 80px;
+  height: auto;
+  left: 10px;
+  position: absolute;
+  top: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.rules-container {
+  padding: 10px 0;
+  margin: auto;
+  border-radius: 15px;
+  border: 5px solid yellow;
+  background-color: white;
+  color: orange;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.rules-container:hover {
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+.rules-container ul {
+  list-style-type: none;
+}
+
+.rules-container p {
+  margin: 10px 0;
+}
+
+.options-container {
+  text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.btn {
+  border: 3px solid yellow;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: all 0.3s ease-in-out;
+  width: 250px;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, yellow, orange);
+
+  color: black;
+  transform: scale(1.1);
+}
+
+.results-container {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 760px) {
+  body {
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .rules-container {
+    width: 99%;
+  }
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  font-size: 1.2rem;
+}
+
+.score {
+  font-weight: 500;
+}
+
+.btn {
+  font-size: 1.2rem;
+  width: 100px;
+}
+
+.results-container {
+  font-size: 1.3rem;
+  margin: 15px 0;
+}
+
+#winner-msg {
+  margin-top: 25px;
+}
+
+#reset-game-btn {
+  display: none;
+  margin: 20px auto;
+}
+
+@keyframes falling-bad-effect {
+  0% {
+    top: -100px;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.bad-effect {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  font-weight: bold;
+  color: red;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
